@@ -26,8 +26,8 @@ export default {
       <div class="bio">
         
         <h5>{{ title }}</h5>
-        <h5>{{ originalTitle }}</h5>
-        <h5>{{ language }}</h5>
+        <h6>{{ originalTitle }}</h6>
+        <h6>{{ language }}</h6>
 
       </div>
     </div>

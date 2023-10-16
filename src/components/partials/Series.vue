@@ -20,6 +20,8 @@ export default {
 </script>
 
 <template>
+
+<h2>Series</h2>
   
   <div class="row">
     <Card v-for="card in store.seriesList"
