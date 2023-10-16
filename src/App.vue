@@ -22,10 +22,11 @@ export default {
           {
             params: {
               api_key: store.apiKey,
-              query:store.movieSearch
+              query: store.movieSearch
             }
           })
           .then ( res => {
+            store.movieList = res.data.results;
             console.log(res.data.results);
           })
           .catch ( err => {

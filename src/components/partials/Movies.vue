@@ -7,13 +7,29 @@ export default {
     name: 'Movies',
     components: {
       Card
+    },
+    data(){
+        return{
+            store
+        }
+    },
+    mounted(){
+        console.log(store.movieList);
     }
 }
 </script>
 
 <template>
   
-  <Card />
+  <div class="row">
+            <Card v-for="card in store.movieList"
+            :title="card.title"
+            :originalTitle="card.original_title"
+            :language="card.original_language"
+            :vote="card.vote_average"
+            />
+        </div>
+  
 
 </template>
 

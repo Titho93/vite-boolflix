@@ -1,12 +1,25 @@
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: {
+      title: String,
+      originalTitle: String,
+      language: String,
+      vote: String
+    }
 }
 </script>
 
 <template>
   
-  <h1>card</h1>
+  <div class="col-2">
+    <div class="bt-card">
+       <h5>{{ title }}</h5>
+       <h5>{{ originalTitle }}</h5>
+       <h5>{{ language }}</h5>
+       <h5>{{ vote }}</h5>
+    </div>
+  </div>
 
 </template>
 
