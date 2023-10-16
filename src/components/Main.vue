@@ -22,13 +22,29 @@ export default {
 
 <template>
   
-  <Movies />
+  <div class="container-bt">
 
-  <Series />
+    <h2>Movies</h2>
+    <Movies />
   
+    <h2>Series</h2>
+    <Series />
+    
+  </div>
+
 
 </template>
 
 <style lang="scss">
+
+.container-bt {
+  width: 70%;
+  margin: 50px auto;
+
+  h2 {
+    text-align: center;
+    padding: 50px 0px;
+  }
+}
 
 </style>

@@ -27,7 +27,7 @@ export default {
       :title="card.title"
       :originalTitle="card.original_title"
       :language="card.original_language"
-      :image="card.poster_path"
+      :image="card.backdrop_path"
     />
   </div>
   

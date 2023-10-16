@@ -27,12 +27,13 @@ export default {
       :title="card.name"
       :originalTitle="card.original_name"
       :language="card.original_language"
-      :image="card.poster_path"
+      :image="card.backdrop_path"
     />
   </div>
   
 </template>
 
 <style lang="scss">
+
 
 </style>
