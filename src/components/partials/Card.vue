@@ -3,10 +3,10 @@ export default {
     name: 'Card',
     props: {
       title: String,
-      name: String,
       originalTitle: String,
       language: String,
-      vote: String
+      vote: String,
+      image: String
     }
 }
 </script>
@@ -15,6 +15,7 @@ export default {
   
   <div class="col">
     <div>
+      <img :src="'https://image.tmdb.org/t/p/w342/' + image"  alt="">
       <h5>{{ title }}</h5>
       <h5>{{ originalTitle }}</h5>
       <h5>{{ language }}</h5>
