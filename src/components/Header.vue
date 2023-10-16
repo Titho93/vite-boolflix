@@ -1,20 +1,21 @@
 <script>
 
-import SearchBar from './partials/SearchBar.vue'
+import { store } from '../data/store'
 
 export default {
     name: 'Header',
-    components: {
-        SearchBar
+    data () {
+      return {
+        store
+      }
     }
-
 }
 </script>
 
 <template>
   
-    <div class="logo">Logo</div>
-    <SearchBar />
+  <input @keyup.enter="$emit('pushSearch')"  v-model.trim="store.movieSearch" type="text" placeholder="Search">
+
 
 </template>
 

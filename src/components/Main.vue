@@ -9,6 +9,13 @@ export default {
     components: {
         Movies,
         Series
+    },
+    data () {
+      return {
+        store
+      }
+    },
+    mounted () {
     }
 }
 </script>

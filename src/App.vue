@@ -1,28 +1,44 @@
 <script>
 
-import axios from 'axios'
-import Header from './components/Header.vue'
-import Main from './components/Main.vue'
 import { store } from './data/store';
-
+import axios from 'axios'
+import Main from './components/Main.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
     Main,
+    Header
   },
   data () {
-    return {
-      store
-    }
-  }
+        return {
+            store
+        }
+    },
+    methods: {
+        getApi () {
+          axios.get(store.apiMoviesUrl,
+          {
+            params: {
+              api_key: store.apiKey,
+              query:store.movieSearch
+            }
+          })
+          .then ( res => {
+            console.log(res.data.results);
+          })
+          .catch ( err => {
+            console.log( err);
+          })
+        }
+    },
 }
 </script>
 
 <template>
   
-  <Header />
+  <Header @pushSearch="getApi" />
 
   <Main />
 
