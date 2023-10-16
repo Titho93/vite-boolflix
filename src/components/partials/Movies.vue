@@ -22,13 +22,13 @@ export default {
 <template>
   
   <div class="row">
-            <Card v-for="card in store.movieList"
-            :title="card.title"
-            :originalTitle="card.original_title"
-            :language="card.original_language"
-            :vote="card.vote_average"
-            />
-        </div>
+    <Card v-for="card in store.movieList"
+      :key="card.id"
+      :title="card.title"
+      :originalTitle="card.original_title"
+      :language="card.original_language"
+    />
+  </div>
   
 
 </template>

@@ -19,19 +19,34 @@ export default {
     methods: {
         getApi () {
           axios.get(store.apiMoviesUrl,
-          {
+            {
             params: {
               api_key: store.apiKey,
               query: store.movieSearch
             }
-          })
-          .then ( res => {
+            })
+            .then ( res => {
             store.movieList = res.data.results;
             console.log(res.data.results);
-          })
-          .catch ( err => {
+            })
+            .catch ( err => {
             console.log( err);
-          })
+            });
+          
+          axios.get(store.apiSeriesUrl,
+            {
+            params: {
+              api_key: store.apiKey,
+              query: store.movieSearch
+            }
+            })
+            .then ( res => {
+            store.seriesList = res.data.results;
+            console.log(res.data.results);
+            })
+            .catch ( err => {
+            console.log( err);
+            });  
         }
     },
 }
