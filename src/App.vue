@@ -1,12 +1,30 @@
 <script>
-export default {
 
+import axios from 'axios'
+import Header from './components/Header.vue'
+import Main from './components/Main.vue'
+import { store } from './data/store';
+
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Main,
+  },
+  data () {
+    return {
+      store
+    }
+  }
 }
 </script>
 
 <template>
   
-  <h1>ciao</h1>
+  <Header />
+
+  <Main />
 
 </template>
 
