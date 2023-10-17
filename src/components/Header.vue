@@ -20,6 +20,9 @@ export default {
     </div>
 
     <input @keyup="$emit('pushSearch')"  v-model.trim="store.movieSearch" type="text" placeholder="Search">
+    <div class="profile">
+      <img src="../assets/bt.webp" alt="">
+    </div>
   </div>
 
 </template>
@@ -34,9 +37,10 @@ export default {
 
    .logo{
     width: 10vw;
+    flex-grow: 2;
 
      img{
-       max-width: 100%;
+       max-width: 160px;
      }
     }
 
@@ -45,6 +49,13 @@ export default {
     background-color: black;
     color: white;
     padding-left: 10px;
+  }
+
+  .profile {
+    margin-left: 20px;
+    img {
+      width: 60px;
+    }
   }
 }
 
