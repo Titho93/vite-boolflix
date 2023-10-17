@@ -31,6 +31,7 @@ export default {
       :language="card.original_language"
       :image="card.backdrop_path"
       :vote="card.vote_average"
+      :bio="card.overview"
     />
   </div>
   

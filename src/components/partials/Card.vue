@@ -6,7 +6,8 @@ export default {
       originalTitle: String,
       language: String,
       vote: String,
-      image: String
+      image: String,
+      bio: String
     }
 }
 </script>
@@ -16,6 +17,7 @@ export default {
   <div class="col-3">
     <div class="card-bt">
 
+      <!-- Cover Front-faces -->
       <div class="cover">
         
         <img v-if="image == null" src="../../assets/notimage.png" alt="">
@@ -23,12 +25,16 @@ export default {
 
       </div>
 
+      <!-- Back-faces  -->
       <div class="bio">
         
+      <!-- Titles    -->
         <h5>{{ title }}</h5>
-        <h6>{{ originalTitle }}</h6>
+
+      <!-- Languages    -->
         <h6>Language: {{ language }}</h6>
     
+      <!-- Ratings    -->
         <div class="star">
           <p v-for="(star, index) in Math.ceil( vote / 2)" :key="index">
             <i class="fa-solid fa-star"></i>
@@ -37,8 +43,11 @@ export default {
           <i class="fa-regular fa-star"></i>
           </p>  
         </div>
-
-
+      
+      <!-- Descriptions    -->
+        <div class="description">
+          <p>{{ bio }}</p>
+        </div>
 
       </div>
     </div>
@@ -89,6 +98,11 @@ export default {
 .star {
   display: flex;
   justify-content: center;
+}
+
+.description {
+  max-height: 30%;
+  overflow-y: auto;
 }
 
 </style>
