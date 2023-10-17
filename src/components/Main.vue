@@ -44,7 +44,7 @@ export default {
 <style lang="scss">
 
 .container-bt {
-  width: 70%;
+  width: 80%;
   margin: 50px auto;
 
 }

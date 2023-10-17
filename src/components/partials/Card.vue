@@ -89,13 +89,13 @@ export default {
   cursor: pointer;
   position: relative;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); 
-  margin: 20px 10px;
+  margin: 40px 0px;
   border: 1px solid white;
   z-index: 2;
 
   img {
     width: 100%;
-    height: 190px;
+    height: 200px;
   }
   
   .bio {
