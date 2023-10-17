@@ -16,7 +16,29 @@ export default {
             store
         }
     },
+    created () {
+      this.startApi();
+    },
+
     methods: {
+
+        startApi () {
+          axios.get(store.apiPopularUrl,
+            {
+            params: {
+              api_key: store.apiKey,
+            }
+            })
+            .then ( res => {
+            store.popularList = res.data.results;
+            console.log(res.data.results);
+            })
+            .catch ( err => {
+            console.log( err);
+            });
+
+        },
+
         getApi () {
           axios.get(store.apiMoviesUrl,
             {
@@ -47,8 +69,11 @@ export default {
             .catch ( err => {
             console.log( err);
             });  
+        },
+        mounted () {
+          this.startApi();
         }
-    },
+    }
 }
 </script>
 
@@ -56,8 +81,8 @@ export default {
   
   <Header @pushSearch="getApi" />
 
-  <Main v-if="(store.movieList.length > 0) || (store.seriesList.length > 0) " />
-  <div class="result" v-else > Nessun risultato </div>  
+  <Main />
+  
 
 </template>
 

@@ -2,13 +2,15 @@
 
 import Movies from './partials/Movies.vue'
 import Series from './partials/Series.vue'
+import Popular from './partials/Popular.vue'
 import { store } from '../data/store';
 
 export default {
     name: 'Main',
     components: {
         Movies,
-        Series
+        Series,
+        Popular
     },
     data () {
       return {
@@ -24,10 +26,15 @@ export default {
   
   <div class="container-bt">
 
-    <Movies />
-  
+    <Popular v-if="(store.movieList.length <= 0) || (store.seriesList.length <= 0)" />
+
+    <div v-else class="list">
+      <Movies />
     
-    <Series />
+      
+      <Series />
+
+    </div>
     
   </div>
 
