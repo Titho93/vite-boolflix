@@ -56,11 +56,13 @@ export default {
   
   <Header @pushSearch="getApi" />
 
-  <Main />
+  <Main v-if="(store.movieList.length > 0) || (store.seriesList.length > 0) " />
+  <div class="result" v-else > Nessun risultato </div>  
 
 </template>
 
 <style lang="scss">
 @use './scss/Main.scss'
+
 
 </style>

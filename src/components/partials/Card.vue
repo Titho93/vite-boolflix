@@ -27,7 +27,18 @@ export default {
         
         <h5>{{ title }}</h5>
         <h6>{{ originalTitle }}</h6>
-        <h6>{{ language }}</h6>
+        <h6>Language: {{ language }}</h6>
+    
+        <div class="star">
+          <p v-for="(star, index) in Math.ceil( vote / 2)" :key="index">
+            <i class="fa-solid fa-star"></i>
+          </p>
+          <p v-for="(star, index) in Math.floor(5 - vote / 2)" :key="index">
+          <i class="fa-regular fa-star"></i>
+          </p>  
+        </div>
+
+
 
       </div>
     </div>
@@ -73,6 +84,11 @@ export default {
     z-index: 3;
     color: white;
   }
+}
+
+.star {
+  display: flex;
+  justify-content: center;
 }
 
 </style>

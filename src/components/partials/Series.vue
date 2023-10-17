@@ -30,6 +30,7 @@ export default {
       :originalTitle="card.original_name"
       :language="card.original_language"
       :image="card.backdrop_path"
+      :vote="card.vote_average"
     />
   </div>
   
