@@ -27,23 +27,25 @@ export default {
 
       <!-- Back-faces  -->
       <div class="bio">
-        
-      <!-- Titles    -->
-        <h5>{{ title }}</h5>
-
-      <!-- Languages    -->
-        <h6>Language: {{ language }}</h6>
+        <div class="bio-up">
+          
+          <!-- Titles    -->
+            <h6>{{ title }}</h6>
     
-      <!-- Ratings    -->
-        <div class="star">
-          <p v-for="(star, index) in Math.ceil( vote / 2)" :key="index">
-            <i class="fa-solid fa-star"></i>
-          </p>
-          <p v-for="(star, index) in Math.floor(5 - vote / 2)" :key="index">
-          <i class="fa-regular fa-star"></i>
-          </p>  
+          <!-- Languages    -->
+            <p>Language: {{ language }}</p>
+        
+          <!-- Ratings    -->
+            <div class="star">
+              <p v-for="(star, index) in Math.ceil( vote / 2)" :key="index">
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p v-for="(star, index) in Math.floor(5 - vote / 2)" :key="index">
+              <i class="fa-regular fa-star"></i>
+              </p>  
+            </div>
+          
         </div>
-      
       <!-- Descriptions    -->
         <div class="description">
           <p>{{ bio }}</p>
@@ -68,30 +70,41 @@ export default {
 
   img {
     width: 100%;
-    height: 180px;
+    height: 190px;
   }
   
   .bio {
     width: 100%;
-    height: 100%;
     position: absolute; 
     top: 0px;
     display: none;
-    
+   
+    p {
+      font-size: 15px;
+    }
   }
 
 }
 
 .card-bt:hover {
+  width: 100%;
   .cover {
     opacity: 0.3;
   }
 
   .bio {
+    height: 100%;
     display: block;
     opacity: 1;
     z-index: 3;
     color: white;
+    display: flex;
+  }
+  .description {
+
+    padding: 20px 0;
+    width: 50%;
+    overflow-y: auto;
   }
 }
 
@@ -100,9 +113,9 @@ export default {
   justify-content: center;
 }
 
-.description {
-  max-height: 30%;
-  overflow-y: auto;
+.bio-up {
+  padding-top: 10px;
+  width: 50%;
 }
 
 </style>
