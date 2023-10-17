@@ -8,7 +8,7 @@ export default {
       vote: String,
       image: String,
       bio: String
-    }
+    },
 }
 </script>
 
@@ -33,7 +33,32 @@ export default {
             <h6>{{ title }}</h6>
     
           <!-- Languages    -->
-            <p>Language: {{ language }}</p>
+          <p class="flag" v-if=" language === 'en'">
+            <span>Language: </span>
+            <img src="/public/en.png" alt="en">
+          </p>
+          <p class="flag" v-else-if=" language === 'it'">
+            <span>Language: </span>
+            <img src="/public/it.png" alt="it">
+          </p>
+          <p class="flag" v-else-if=" language === 'ja'">
+            <span>Language: </span>
+            <img src="/public/jp.png" alt="jp">
+          </p>
+          <p class="flag" v-else-if=" language === 'es'">
+            <span>Language: </span>
+            <img src="/public/sp.png" alt="es">
+          </p>
+          <p class="flag" v-else-if=" language === 'de'">
+            <span>Language: </span>
+            <img src="/public/de.png" alt="de">
+          </p>
+          <p class="flag" v-else-if=" language === 'fr'">
+            <span>Language: </span>
+            <img src="/public/fr.png" alt="fr">
+          </p>
+          <p v-else>Language: {{ language }}</p>
+
         
           <!-- Ratings    -->
             <div class="star">
@@ -116,6 +141,13 @@ export default {
 .bio-up {
   padding-top: 10px;
   width: 50%;
+}
+
+.flag {
+  img {
+    width: 20px;
+    height: 15px;
+  }
 }
 
 </style>
