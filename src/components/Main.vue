@@ -26,7 +26,7 @@ export default {
   
   <div class="container-bt">
 
-    <Popular v-if="(store.movieList.length <= 0) || (store.seriesList.length <= 0)" />
+    <Popular v-if="(store.movieList.length <= 0) & (store.seriesList.length <= 0)" />
 
     <div v-else class="list">
       <Movies />

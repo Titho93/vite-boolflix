@@ -20,7 +20,6 @@ export default {
     </div>
 
     <input @keyup="$emit('pushSearch')"  v-model.trim="store.movieSearch" type="text" placeholder="Search">
-    
   </div>
 
 </template>
@@ -43,6 +42,9 @@ export default {
 
   input {
     border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
   }
 }
 
