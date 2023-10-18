@@ -34,9 +34,10 @@ export default {
         :image="card.poster_path"
         :vote="card.vote_average"
         :bio="card.overview"
+        :relase="card.release_date"
       />
     </div>
-    
+
 </div>
 
   

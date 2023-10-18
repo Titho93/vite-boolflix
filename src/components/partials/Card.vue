@@ -7,7 +7,8 @@ export default {
       language: String,
       vote: String,
       image: String,
-      bio: String
+      bio: String,
+      relase: String
     },
 }
 </script>
@@ -69,8 +70,16 @@ export default {
               <i class="fa-regular fa-star"></i>
               </p>  
             </div>
-          
+
+            <!-- Relase  -->
+            <div>
+              <span>Relase: </span>
+              <p>{{ relase }}</p>
+            </div>
+
         </div>
+
+
       <!-- Descriptions    -->
         <div class="description">
           <p>{{ bio }}</p>
@@ -114,6 +123,13 @@ export default {
 
 }
 
+.star {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+  }
+
+
 .card-bt:hover {
   width: 100%;
   transform: translateY(-20px);
@@ -135,11 +151,7 @@ export default {
     width: 50%;
     overflow-y: auto;
   }
-  .star {
-    display: flex;
-    justify-content: center;
-    color: yellow;
-  }
+  
   .bio-up {
     padding-top: 10px;
     width: 50%;
@@ -163,8 +175,6 @@ export default {
       font-size: 20px;
     }
   }
-
-  
 }
 
 </style>
