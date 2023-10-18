@@ -116,6 +116,7 @@ export default {
 
 .card-bt:hover {
   width: 100%;
+  transform: translateY(-20px);
   .cover {
     opacity: 0.3;
   }
@@ -127,6 +128,7 @@ export default {
     z-index: 3;
     color: white;
     display: flex;
+     
   }
   .description {
     padding: 20px 0;
@@ -149,9 +151,6 @@ export default {
     }
   }
 }
-
-
-
 
 .plus {
   .card-bt {
