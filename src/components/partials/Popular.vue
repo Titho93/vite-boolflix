@@ -21,19 +21,24 @@ export default {
 
 <template>
 
-<h2>Most Popular</h2>
-  
-  <div class="row">
-    <Card v-for="card in store.popularList"
-      :key="card.id"
-      :title="card.title"
-      :originalTitle="card.original_title"
-      :language="card.original_language"
-      :image="card.backdrop_path"
-      :vote="card.vote_average"
-      :bio="card.overview"
-    />
-  </div>
+<div class="container-bt">
+
+  <h2>MOST POPULAR</h2>
+    
+    <div class="row plus">
+      <Card v-for="card in store.popularList"
+        :key="card.id"
+        :title="card.title"
+        :originalTitle="card.original_title"
+        :language="card.original_language"
+        :image="card.poster_path"
+        :vote="card.vote_average"
+        :bio="card.overview"
+      />
+    </div>
+    
+</div>
+
   
 
 </template>

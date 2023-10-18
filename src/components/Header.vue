@@ -16,7 +16,7 @@ export default {
   
   <div class="bt-container pt-3 pb-3">
     <div class="logo">
-      <img src="/public/logo-boolflix.png" alt="logo">
+      <img src="/logo-boolflix.png" alt="logo">
     </div>
 
     <input @keyup="$emit('pushSearch')"  v-model.trim="store.movieSearch" type="text" placeholder="Search">

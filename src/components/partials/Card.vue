@@ -35,27 +35,27 @@ export default {
           <!-- Languages    -->
           <p class="flag" v-if=" language === 'en'">
             <span>Language: </span>
-            <img src="/public/en.png" alt="en">
+            <img src="/en.png" alt="en">
           </p>
           <p class="flag" v-else-if=" language === 'it'">
             <span>Language: </span>
-            <img src="/public/it.png" alt="it">
+            <img src="/it.png" alt="it">
           </p>
           <p class="flag" v-else-if=" language === 'ja'">
             <span>Language: </span>
-            <img src="/public/jp.png" alt="jp">
+            <img src="/jp.png" alt="jp">
           </p>
           <p class="flag" v-else-if=" language === 'es'">
             <span>Language: </span>
-            <img src="/public/sp.png" alt="es">
+            <img src="/sp.png" alt="es">
           </p>
           <p class="flag" v-else-if=" language === 'de'">
             <span>Language: </span>
-            <img src="/public/de.png" alt="de">
+            <img src="/de.png" alt="de">
           </p>
           <p class="flag" v-else-if=" language === 'fr'">
             <span>Language: </span>
-            <img src="/public/fr.png" alt="fr">
+            <img src="/fr.png" alt="fr">
           </p>
           <p v-else>Language: {{ language }}</p>
 
@@ -90,7 +90,6 @@ export default {
   position: relative;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); 
   margin: 40px 0px;
-  border: 1px solid white;
   z-index: 2;
 
   img {
@@ -106,6 +105,10 @@ export default {
    
     p {
       font-size: 15px;
+    }
+
+    h6 {
+      color: red;
     }
   }
 
@@ -126,28 +129,43 @@ export default {
     display: flex;
   }
   .description {
-
     padding: 20px 0;
     width: 50%;
     overflow-y: auto;
   }
-}
-
-.star {
-  display: flex;
-  justify-content: center;
-}
-
-.bio-up {
-  padding-top: 10px;
-  width: 50%;
-}
-
-.flag {
-  img {
-    width: 20px;
-    height: 15px;
+  .star {
+    display: flex;
+    justify-content: center;
+    color: yellow;
   }
+  .bio-up {
+    padding-top: 10px;
+    width: 50%;
+  }
+  .flag {
+    img {
+      width: 20px;
+      height: 15px;
+    }
+  }
+}
+
+
+
+
+.plus {
+  .card-bt {
+    
+    img {
+      height: 400px;
+    }
+
+    h6 {
+      font-size: 20px;
+    }
+  }
+
+  
 }
 
 </style>

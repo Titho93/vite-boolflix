@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-<h2>Series</h2>
+<h2>SERIES</h2>
   
   <div class="row">
     <Card v-for="card in store.seriesList"

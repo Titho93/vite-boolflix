@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-<h2>Movies</h2>
+<h2>MOVIES</h2>
   
   <div class="row">
     <Card v-for="card in store.movieList"
