@@ -15,6 +15,14 @@ export default {
     },
     mounted(){
         console.log(store.seriesList);
+    },
+    computed: {
+        seriesResult(){
+            if(store.seriesList.length > 0) {
+                return 'Found ' + store.seriesList.length + ' Series';
+            }
+            return 'Series Not Found';
+        }
     }
 }
 </script>
@@ -22,6 +30,7 @@ export default {
 <template>
 
 <h2>SERIES</h2>
+<span>{{ seriesResult }}</span>
   
   <div class="row">
     <Card v-for="card in store.seriesList"
@@ -38,7 +47,10 @@ export default {
   
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
+span {
+  color: red;
+}
 
 </style>

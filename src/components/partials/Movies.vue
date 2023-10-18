@@ -15,13 +15,23 @@ export default {
     },
     mounted(){
         console.log(store.movieList);
+    },
+    computed: {
+        movieResult(){
+            if(store.movieList.length > 0) {
+                return 'Found ' + store.movieList.length + ' Movies';
+            }
+            return 'Movies Not Found';
+        }
     }
+    
 }
 </script>
 
 <template>
 
 <h2>MOVIES</h2>
+<span>{{ movieResult }}</span>
   
   <div class="row">
     <Card v-for="card in store.movieList"
@@ -39,6 +49,10 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+span {
+  color: red;
+}
 
 </style>
