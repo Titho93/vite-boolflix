@@ -41,7 +41,7 @@ export default {
       :image="card.backdrop_path"
       :vote="card.vote_average"
       :bio="card.overview"
-      :relase="card.release_date"
+      :relase="card.first_air_date"
     />
   </div>
   
